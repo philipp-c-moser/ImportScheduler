@@ -26,7 +26,7 @@ steps:
   displayName: 'Install Node.js' 
   
 - script: |
-    cd ImportScheduler/ClientApp
+    cd ImportScheduler.Web/ClientApp
     npm install -g @angular/cli
     npm install
     ng build --prod
