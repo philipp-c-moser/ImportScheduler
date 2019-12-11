@@ -5,7 +5,9 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   
-  { path: '', component: HomeComponent, pathMatch: 'full' }
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'ImportHistory', component: HomeComponent},
+  { path: 'ScheduleImport', component: HomeComponent}
 
 ];
 
