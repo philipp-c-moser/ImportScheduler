@@ -41,9 +41,9 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
-    contents: '**/$(BuildConfiguration)/**/ClientApp/'
+    contents: '**/ClientApp/**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'Copy Client Files'
+  displayName: 'Copy ClientApp Files'
 
 
 
