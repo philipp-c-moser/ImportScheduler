@@ -36,14 +36,14 @@ steps:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb)'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'Copy Files'
+  displayName: 'Copy Server Files'
 
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: '**/$(BuildConfiguration)/**/ClientApp/'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'Copy Files'
+  displayName: 'Copy Client Files'
 
 
 
