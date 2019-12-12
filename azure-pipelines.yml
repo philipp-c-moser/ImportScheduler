@@ -41,7 +41,9 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
-    contents: '**/ClientApp/**'
+    Contents: |
+      ImportScheduler.Web/**/ClientApp/**
+      !ImportScheduler.Web/**/node_modules/**
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy ClientApp Files'
 
