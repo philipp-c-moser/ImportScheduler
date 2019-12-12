@@ -1,6 +1,7 @@
 trigger:
 - master
 - develop
+- devops-test
 
 pool:
   vmImage: 'ubuntu-latest'
