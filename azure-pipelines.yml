@@ -4,10 +4,11 @@ trigger:
 - devops-test
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
   buildConfiguration: 'Release'
+  webProjectName: 'ImportScheduler.Web'
 
 
 steps:
@@ -22,23 +23,11 @@ steps:
   displayName: 'Install Node.js' 
   
 - script: |
-    cd ImportScheduler.Web/ClientApp
+    cd $(webProjectName)/ClientApp
     npm install -g @angular/cli
     npm install
     ng build --prod
   displayName: 'npm install and build'
-
-
-# .NET Core NUnit-Tests
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\** 
-    searchFolder: '$(System.DefaultWorkingDirectory)' 
-    configuration: '$(buildConfiguration)'  
 
 
 # Copy Builds to StagingDirectory
@@ -53,8 +42,8 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
-      ImportScheduler.Web/**/ClientApp/dist/**
-      !ImportScheduler.Web/**/node_modules/**
+      $(webProjectName)/**/ClientApp/dist/**
+      !$(webProjectName)/**/node_modules/**
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy ClientApp Files'
 
