@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportScheduler.Core", "Imp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportScheduler.Infrastructure", "ImportScheduler.Infrastructure\ImportScheduler.Infrastructure.csproj", "{B72D31E0-EA7D-489B-8E33-009BCF9D566C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{1F2AB089-BC2B-4C8F-8148-BE3D45B36406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportScheduler.Tests", "UnitTests\ImportScheduler.Tests\ImportScheduler.Tests.csproj", "{03C1F388-5016-4671-AD92-121A76216273}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,11 +31,18 @@ Global
 		{B72D31E0-EA7D-489B-8E33-009BCF9D566C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72D31E0-EA7D-489B-8E33-009BCF9D566C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72D31E0-EA7D-489B-8E33-009BCF9D566C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C1F388-5016-4671-AD92-121A76216273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C1F388-5016-4671-AD92-121A76216273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C1F388-5016-4671-AD92-121A76216273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C1F388-5016-4671-AD92-121A76216273}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5EE65FF3-17CF-46A4-870B-B92D106CAFDE}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03C1F388-5016-4671-AD92-121A76216273} = {1F2AB089-BC2B-4C8F-8148-BE3D45B36406}
 	EndGlobalSection
 EndGlobal
