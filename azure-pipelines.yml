@@ -43,7 +43,7 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
-      ImportScheduler.Web/**/ClientApp/**
+      ImportScheduler.Web/**/ClientApp/dist/**
       !ImportScheduler.Web/**/node_modules/**
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy ClientApp Files'
