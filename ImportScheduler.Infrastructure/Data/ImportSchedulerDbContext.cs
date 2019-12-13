@@ -18,6 +18,12 @@ namespace ImportScheduler.Infrastructure.Data
 
         }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
+
     }
 }
     
