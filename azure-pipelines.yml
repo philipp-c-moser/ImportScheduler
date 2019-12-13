@@ -1,6 +1,7 @@
 trigger:
 - master
 - develop
+- feature/setUpDomain
 
 pool:
   vmImage: 'ubuntu-latest'
