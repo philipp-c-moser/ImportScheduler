@@ -1,7 +1,6 @@
 trigger:
 - master
 - develop
-- fixing-develop-branch
 
 pool:
   vmImage: 'ubuntu-latest'
