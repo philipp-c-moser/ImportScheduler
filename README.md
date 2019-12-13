@@ -1,5 +1,4 @@
 # ImportScheduler
-[![Build Status](https://dev.azure.com/philipp-c-moser/ImportScheduler/_apis/build/status/philipp-c-moser.ImportScheduler?branchName=develop)](https://dev.azure.com/philipp-c-moser/ImportScheduler/_build/latest?definitionId=27&branchName=develop)
 
 
 ## What this application will do
