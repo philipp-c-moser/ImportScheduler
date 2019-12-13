@@ -20,20 +20,13 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js' 
-  
+
 - script: |
     cd ImportScheduler.Web/ClientApp
     npm install -g @angular/cli
     npm install
     ng build --prod
   displayName: 'npm install and build'
-
-
-# .NET Core NUnit-Tests
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'  
 
 
 # Copy Builds to StagingDirectory
