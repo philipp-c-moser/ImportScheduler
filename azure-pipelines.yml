@@ -29,9 +29,14 @@ steps:
   displayName: 'npm install and build'
 
 
+# .NET Core NUnit-Tests
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'  
 
 
-
+# Copy Builds to StagingDirectory
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
