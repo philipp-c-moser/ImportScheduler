@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
-namespace ImportScheduler.Infrastructure
+namespace ImportScheduler.Infrastructure.Data
 {
     public class ImportSchedulerDbContext : DbContext
     {
