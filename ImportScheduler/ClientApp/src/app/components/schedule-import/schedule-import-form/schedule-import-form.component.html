@@ -1,13 +1,10 @@
-<form #f="ngForm" (ngSubmit)="submit()" novalidate>
-
+<form #f="ngForm" class="col-md-6" (ngSubmit)="submit()" novalidate>
 
       <div class="form-group">
         <label for="import-name">Import-Name</label>
         <input type="text" class="form-control" id="import-name">
         <div class="alert alert-danger" *ngIf="">Please specify the import-name</div>
       </div>
-
-
 
       <button class="btn btn-primary" [disabled]="">
         Save
