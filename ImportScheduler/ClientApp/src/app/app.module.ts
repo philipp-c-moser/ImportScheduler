@@ -6,17 +6,19 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { ScheduleImportComponent } from './schedule-import/schedule-import/schedule-import.component';
-import { ScheduleImportFormComponent } from './schedule-import/schedule-import-form/schedule-import-form.component';
+import { AppComponent } from './components/app.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { ScheduleImportComponent } from './components/schedule-import/schedule-import/schedule-import.component';
+import { ScheduleImportFormComponent } from './components/schedule-import/schedule-import-form/schedule-import-form.component';
+import { ImportHistoryComponent } from './components/import-history/import-history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
+    ImportHistoryComponent,
     ScheduleImportComponent,
     ScheduleImportFormComponent
   ],

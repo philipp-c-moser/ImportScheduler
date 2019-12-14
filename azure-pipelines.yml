@@ -1,7 +1,7 @@
 trigger:
 - master
 - develop
-- feature/setUpDomain
+- restructuring
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -22,7 +22,7 @@ steps:
   displayName: 'Install Node.js' 
   
 - script: |
-    cd ImportScheduler.Web/ClientApp
+    cd ImportScheduler/ClientApp
     npm install -g @angular/cli
     npm install
     ng build --prod
@@ -43,8 +43,8 @@ steps:
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
-      ImportScheduler.Web/**/ClientApp/dist/**
-      !ImportScheduler.Web/**/node_modules/**
+      ImportScheduler/**/ClientApp/dist/**
+      !ImportScheduler/**/node_modules/**
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy ClientApp Files'
 

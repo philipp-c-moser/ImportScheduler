@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './schedule-import-form.component.html',
 })
 export class ScheduleImportFormComponent {
+
+
+  submit() {
+
+  }
+
 }
