@@ -2,21 +2,81 @@
 
 Your CSV User import file shoud contain the following columns.
 
-<ul>
-    <li>
-        FirstName
-    </li>
-    <li>
-        LastName
-    </li>
-    <li>
-        Gender
-    </li>
-    <li>
-        Email
-    </li>
-    <li>
-        MobileNumber
-    </li>
+<div class="list-group mt-3">
 
-</ul>
+    <div class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">
+            FirstName
+        </h5>
+        <small>
+            Text
+            <span class="badge badge-danger badge-pill">required</span>
+        </small>
+      </div>
+      <p class="mb-1">
+          The 'FirstName' property needs to be derived in the Import-CSV-File.
+        </p>
+    </div>
+
+    <div class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">LastName</h5>
+            <small>
+                Text
+                <span class="badge badge-danger badge-pill">required</span>
+            </small>
+        </div>
+        <p class="mb-1">
+            The 'LastName' property needs to be derived in the Import-CSV-File.
+          </p>
+    </div>
+
+    <div class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Gender</h5>
+          <small>
+              Text
+              <span class="badge badge-primary badge-pill">optional</span>
+        </small>
+        </div>
+        <p class="mb-1">
+            You can specify the following values:<br />
+            '<i>m</i>' for male<br />
+            '<i>f</i>' for female<br />
+            '<i>n</i>' for none
+        </p>
+        <p class="mb-1">
+            <i>If no value is specified, the default value is 'n'</i>
+        </p>
+    </div>
+
+    <div class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Email</h5>
+          <small>
+              Text
+              <span class="badge badge-danger badge-pill">required</span>
+        </small>
+        </div>
+        <p class="mb-1">
+            Please provide a Email Address, that matches to the following pattern: 
+            <i>user@domain.com</i>
+          </p>
+    </div>
+
+    <div class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">MobileNumber</h5>
+          <small>
+              Text
+              <span class="badge badge-primary badge-pill">optional</span>
+        </small>
+        </div>
+        <p class="mb-1">
+            Please provide a Mobile Number, that matches to the following pattern:
+            <i>+1 717-827-7017</i>
+          </p>
+    </div>
+    
+  </div>
