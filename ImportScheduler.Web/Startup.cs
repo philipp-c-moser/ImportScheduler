@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ImportScheduler.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ImportScheduler
 {
@@ -22,6 +24,10 @@ namespace ImportScheduler
         {
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
+
+            services.AddDbContext<ImportSchedulerDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]));
+
+
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
