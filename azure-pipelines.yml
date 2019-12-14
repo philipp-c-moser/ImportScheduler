@@ -1,7 +1,6 @@
 trigger:
 - master
 - develop
-- restructuring
 
 pool:
   vmImage: 'ubuntu-latest'
