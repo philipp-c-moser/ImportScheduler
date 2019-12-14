@@ -1,7 +1,7 @@
 trigger:
 - master
 - develop
-- feature/setUpDomain
+- restructuring
 
 pool:
   vmImage: 'ubuntu-latest'
