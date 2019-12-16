@@ -1,3 +1,21 @@
 <h2>
     User-Overview
 </h2>
+
+
+<div>
+    <ngx-datatable 
+        class="material"
+        [rows]="rows"
+        [loadingIndicator]="loadingIndicator"
+        [columns]="columns"
+        [headerHeight]="40"
+        [summaryRow]="true"
+        [summaryPosition]="'bottom'"
+        [footerHeight]="40"
+        [limit]="5"
+        rowHeight="auto"
+        [reorderable]="reorderable"
+      >
+    </ngx-datatable>
+</div>
