@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,8 +7,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ImportScheduler.Core;
 using ImportScheduler.Core.Repository;
+using ImportScheduler.Core.Domain.CsvImport;
 using ImportScheduler.Core.Dto.CsvImport;
-using AutoMapper;
+
+
+
 
 namespace ImportScheduler.Controllers
 {
@@ -32,22 +36,7 @@ namespace ImportScheduler.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var allUsers = await _userRepository.GetAllAsync();
-
-            var result = new List<UserDto>();
-
-
-            foreach(var user in allUsers)
-            {
-                result.Add(new UserDto()
-                {
-                    Id = user.Id,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Gender = user.Gender,
-                    Email = user.Email,
-                    MobileNumber = user.MobileNumber
-                });
-            }
+            var result = _mapper.Map<List<User>, List<UserDto>>(allUsers);
 
             return Ok(result);
         }
