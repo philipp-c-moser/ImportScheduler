@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ImportScheduler.Core.Domain.CsvImport;
 
 namespace ImportScheduler.Core.Repository
 {
-    interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
     }
 }
