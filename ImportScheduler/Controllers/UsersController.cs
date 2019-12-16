@@ -27,7 +27,7 @@ namespace ImportScheduler.Controllers
 
 
 
-        public async Task<IEnumerable<UserDto>> GetUsers()
+        public async Task<IActionResult> GetUsers()
         {
             var allUsers = await _userRepository.GetAllAsync();
 
@@ -47,7 +47,7 @@ namespace ImportScheduler.Controllers
                 });
             }
 
-            return result;
+            return Ok(result);
         }
 
 
