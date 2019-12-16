@@ -3,7 +3,7 @@
 
 ## Live-Demo
 
-### Continious Integration / Continious Deployment with Azure DevOps
+### continuous Integration / continuous Deployment with Azure DevOps
 [https://dev.azure.com/philipp-c-moser/ImportScheduler](https://dev.azure.com/philipp-c-moser/ImportScheduler)
 
 Trigger Build when pushing commits to the repository
