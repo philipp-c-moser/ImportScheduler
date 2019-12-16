@@ -10,7 +10,7 @@ using ImportScheduler.Core;
 using ImportScheduler.Infrastructure;
 using ImportScheduler.Core.Repository;
 using ImportScheduler.Infrastructure.Repository;
-
+using AutoMapper;
 
 namespace ImportScheduler
 {
@@ -29,6 +29,10 @@ namespace ImportScheduler
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserRepository, UserRepository>();
+
+
+            services.AddAutoMapper(typeof(Startup));
+
 
             services.AddDbContext<ImportSchedulerDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]));
 
