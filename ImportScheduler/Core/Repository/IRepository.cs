@@ -5,7 +5,21 @@ using System.Threading.Tasks;
 
 namespace ImportScheduler.Core.Repository
 {
-    interface IRepository
+    public interface IRepository<TEntity> where TEntity : class
     {
+
+        IQueryable<TEntity> GetAll();
+
+        Task<List<TEntity>> GetAllAsync();
+
+        Task<TEntity> GetByIdAsync(int id);
+
+        Task CreateAsync(TEntity entity);
+
+        Task UpdateAsync(int id, TEntity entity);
+
+        Task DeleteAsync(int id);
+
+
     }
 }
