@@ -16,9 +16,9 @@ namespace ImportScheduler.Core.Repository
 
         Task CreateAsync(TEntity entity);
 
-        Task UpdateAsync(int id, TEntity entity);
+        void Update(TEntity entity);
 
-        Task DeleteAsync(int id);
+        void Delete(TEntity entity);
 
 
     }
