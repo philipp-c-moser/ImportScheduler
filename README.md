@@ -6,8 +6,18 @@
 ### Continious Integration / Continious Deployment with Azure DevOps
 [https://dev.azure.com/philipp-c-moser/ImportScheduler](https://dev.azure.com/philipp-c-moser/ImportScheduler)
 
+Trigger Build when pushing commits to the repository
+ 1. Build ASP.NET Core Backend
+ 2. Install node.js and build Angular Client 
+ 3. Copy all build-files to a staging directory
+ 4. Publish staging directory as Artifact
+
 ### Hosted on Microsoft Azure App Services
 [https://importscheduler.azurewebsites.net](https://importscheduler.azurewebsites.net)
+
+Two Release-Pipelines
+ - Continuous Deployment to Testinstallation in Azure App Services
+ - Manual Deployment 
 
 
 ## What this application will do
