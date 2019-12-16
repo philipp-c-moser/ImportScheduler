@@ -3,14 +3,16 @@ using ImportScheduler.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ImportScheduler.Migrations
 {
     [DbContext(typeof(ImportSchedulerDbContext))]
-    partial class ImportSchedulerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191216182340_UpdateUsersModel")]
+    partial class UpdateUsersModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
