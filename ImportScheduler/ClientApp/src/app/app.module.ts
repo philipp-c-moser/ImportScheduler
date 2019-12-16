@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ScheduleImportComponent } from './components/schedule-import/schedule-import/schedule-import.component';
 import { ScheduleImportFormComponent } from './components/schedule-import/schedule-import-form/schedule-import-form.component';
 import { ImportHistoryComponent } from './components/import-history/import-history.component';
+import { UserOverviewComponent } from './components/user-overview/user-overview.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImportHistoryComponent } from './components/import-history/import-histo
     HomeComponent,
     ImportHistoryComponent,
     ScheduleImportComponent,
-    ScheduleImportFormComponent
+    ScheduleImportFormComponent,
+    UserOverviewComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
