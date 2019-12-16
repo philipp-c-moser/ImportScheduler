@@ -1,6 +1,15 @@
 # ImportScheduler
 [![Build Status](https://dev.azure.com/philipp-c-moser/ImportScheduler/_apis/build/status/philipp-c-moser.ImportScheduler?branchName=develop)](https://dev.azure.com/philipp-c-moser/ImportScheduler/_build/latest?definitionId=27&branchName=develop)
 
+## Live-Demo
+
+### Continious Integration / Continious Deployment with Azure DevOps
+[https://dev.azure.com/philipp-c-moser/ImportScheduler](https://dev.azure.com/philipp-c-moser/ImportScheduler)
+
+### Hosted on Microsoft Azure App Services
+[https://importscheduler.azurewebsites.net](https://importscheduler.azurewebsites.net)
+
+
 ## What this application will do
 This application allows us to schedule a import of mutliple users via CSV-File.
 While uploading the CSV-Uploadfile, the user can select out of three different options:
