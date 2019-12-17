@@ -25,7 +25,7 @@ namespace ImportScheduler.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost, DisableRequestSizeLimit]
         public ActionResult UploadFile()
         {
 

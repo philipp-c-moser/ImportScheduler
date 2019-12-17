@@ -11,7 +11,7 @@ export class ScheduleImportService {
     uploadFile(file) {
 
         return this.http
-            .post('', file)
+            .post('/api/import', file)
             .map(res => res.json());
 
     }
