@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using ImportScheduler.Core;
 using ImportScheduler.Infrastructure.Data;
+using System.IO;
 
 namespace ImportScheduler.Controllers
 {
@@ -31,6 +32,12 @@ namespace ImportScheduler.Controllers
             {
                 var file = Request.Form.Files[0];
                 var webRootPath = _hostingEnvironment.WebRootPath;
+
+                var uploadPath = Path.Combine(webRootPath, "Uploads");
+
+
+
+
 
 
                 return Ok("Upload successful");
