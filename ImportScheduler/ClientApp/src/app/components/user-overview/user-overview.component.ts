@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserOverviewService } from 'src/app/services/user-overview.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { UserOverviewService } from 'src/app/services/user-overview.service';
 })
 
 
-export class UserOverviewComponent {
+export class UserOverviewComponent implements OnInit {
 
   constructor(private userOverviewService: UserOverviewService) { }
 
@@ -41,5 +41,12 @@ export class UserOverviewComponent {
   ];
 
 
+
+  ngOnInit() {
+    
+  }
+
+
+  
 
 }
