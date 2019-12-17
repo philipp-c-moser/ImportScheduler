@@ -1,4 +1,5 @@
 import { Http } from '@angular/http';
+import 'rxjs-compat/add/operator/map';
 
 
 export class ScheduleImportService {
@@ -7,10 +8,10 @@ export class ScheduleImportService {
 
 
     uploadFile(file) {
-
+        
         return this.http
-            .post('', file);
-
+            .post('', file)
+            .map(res => res.json());
 
     }
 
