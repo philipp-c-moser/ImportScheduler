@@ -36,7 +36,16 @@ namespace ImportScheduler.Controllers
                 var uploadPath = Path.Combine(webRootPath, "Uploads");
 
 
+                if(!Directory.Exists(uploadPath))
+                {
+                    Directory.CreateDirectory(uploadPath);
+                }
 
+
+                if(file.Length > 0)
+                {
+
+                }
 
 
 
