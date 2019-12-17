@@ -1,6 +1,6 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import  { map } from 'rxjs/operators';
+import 'rxjs-compat/add/operator/map';
 
 
 @Injectable()
@@ -11,7 +11,8 @@ export class UserOverviewService {
 
     getUsers() {
         return this.http
-            .get('/api/users').map(res => res.json());
+            .get('/api/users')
+            .map(res => res.json());
     }
 
 
