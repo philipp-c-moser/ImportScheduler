@@ -1,4 +1,4 @@
-<form #f="ngForm" class="col-md-6" (ngSubmit)="submit(importfile.files)" novalidate>
+<form #form="ngForm" class="col-md-6" (ngSubmit)="upload(importfile.files)" novalidate>
 
       <div class="form-group">
         <input type="text" class="form-control" id="import-name" placeholder="Import-Name">
@@ -37,7 +37,7 @@
       <div class="form-group">
         <h4>Agreement</h4>
         <div class="form-check">
-          <input type="checkbox" name="agreement" id="agreement" class="form-check-input" />
+          <input type="checkbox" name="agreement" id="agreement" class="form-check-input" required />
           <label class="form-check-label" for="agreement">I do not import sensitive data.</label>
         </div>
         
@@ -46,7 +46,7 @@
       
 
 
-      <button class="btn btn-primary" [disabled]="">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
         Save
       </button>
 

@@ -10,7 +10,7 @@ export class ScheduleImportFormComponent {
   constructor(private scheduleImportService: ScheduleImportService) { }
 
 
-  submit(files) {
+  upload(files) {
 
     if(files.length === 0) 
     {
@@ -24,7 +24,7 @@ export class ScheduleImportFormComponent {
       formData.append(file.name, file);
     }
 
-
+    this.scheduleImportService.uploadFile(formData);
     
   }
 
