@@ -8,9 +8,7 @@ import { UserOverviewService } from 'src/app/services/user-overview.service';
 })
 
 
-export class UserOverviewComponent implements OnInit {
-
-  constructor(private userOverviewService: UserOverviewService) { }
+export class UserOverviewComponent {
 
   rows = [
     { id: 1, firstname: 'Reginald', lastname: 'Edison', gender: 'Male', email: 'ReginaldAEdison@einrot.com', mobilenumber: '206-808-8464' },
@@ -26,11 +24,6 @@ export class UserOverviewComponent implements OnInit {
     { id: 11, firstname: 'Reginald', lastname: 'Edison', gender: 'Male', email: 'ReginaldAEdison@einrot.com', mobilenumber: '206-808-8464' },
     { id: 12, firstname: 'Reginald', lastname: 'Edison', gender: 'Male', email: 'ReginaldAEdison@einrot.com', mobilenumber: '206-808-8464' },
   ];
-
-  loadingIndicator = true;
-  reorderable = true;
-
-
   columns = [
     { prop: 'id' },
     { prop: 'firstname' },
@@ -40,11 +33,17 @@ export class UserOverviewComponent implements OnInit {
     { prop: 'mobilenumber', sortable: false }
   ];
 
+  loadingIndicator = true;
+  reorderable = true;
+
+  constructor(private userOverviewService: UserOverviewService) {
+
+    // this.rows = this.userOverviewService.getUsers();
 
 
-  ngOnInit() {
-    
-  }
+   }
+
+ 
 
 
   
