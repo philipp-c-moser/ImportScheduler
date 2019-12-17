@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { UserOverviewService } from 'src/app/services/user-overview.service';
 
 @Component({
   selector: 'user-overview',
   templateUrl: './user-overview.component.html',
   styleUrls: ['./user-overview.component.scss']
 })
+
+
 export class UserOverviewComponent {
+
+  constructor(private userOverviewService: UserOverviewService) { }
 
   rows = [
     { id: 1, firstname: 'Reginald', lastname: 'Edison', gender: 'Male', email: 'ReginaldAEdison@einrot.com', mobilenumber: '206-808-8464' },

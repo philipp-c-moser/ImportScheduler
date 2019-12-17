@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
-
 import { AppRoutingModule } from './app-routing.module';
+
+import { UserOverviewService } from './services/user-overview.service';
 
 import { AppComponent } from './components/app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
@@ -28,11 +30,14 @@ import { UserOverviewComponent } from './components/user-overview/user-overview.
   imports: [
     NgxDatatableModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    HttpModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    UserOverviewService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
