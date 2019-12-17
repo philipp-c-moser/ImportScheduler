@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 using ImportScheduler.Core;
 using ImportScheduler.Infrastructure.Data;
 
@@ -18,6 +20,27 @@ namespace ImportScheduler.Controllers
             _unitOfWork = unitOfWork;
         }
 
+
+        [HttpPost]
+        public ActionResult UploadImportFile()
+        {
+
+            try
+            {
+                var file = Request.Form.Files[0];
+
+
+                return Ok("Upload successful");
+
+
+            }
+            catch(System.Exception ex)
+            {
+                return BadRequest("Upload failed: " + ex.Message);
+            }
+
+
+        }
 
 
     }
