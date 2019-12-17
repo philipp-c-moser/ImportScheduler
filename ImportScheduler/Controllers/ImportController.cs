@@ -26,12 +26,20 @@ namespace ImportScheduler.Controllers
 
 
         [HttpPost]
-        public ActionResult UploadImportFile()
+        public ActionResult UploadFile()
         {
 
             try
             {
                 var file = Request.Form.Files[0];
+
+                if(file.ContentType != "text/csv") 
+                {
+                    return BadRequest("Upload failed: ContentType  not allowed!");
+                }
+
+
+
                 var webRootPath = _webHostEnvironment.WebRootPath;
 
                 var uploadPath = Path.Combine(webRootPath, "Uploads");
