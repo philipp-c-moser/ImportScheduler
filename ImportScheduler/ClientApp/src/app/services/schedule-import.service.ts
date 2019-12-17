@@ -1,14 +1,15 @@
 import { Http } from '@angular/http';
+import { Injectable } from '@angular/core';
 import 'rxjs-compat/add/operator/map';
 
-
+@Injectable()
 export class ScheduleImportService {
 
     constructor(private http: Http) {}
 
 
     uploadFile(file) {
-        
+
         return this.http
             .post('', file)
             .map(res => res.json());
