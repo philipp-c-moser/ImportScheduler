@@ -8,6 +8,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AppRoutingModule } from './app-routing.module';
 
 import { UserOverviewService } from './services/user-overview.service';
+import { ScheduleImportService } from './services/schedule-import.service';
 
 import { AppComponent } from './components/app.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
@@ -36,7 +37,8 @@ import { UserOverviewComponent } from './components/user-overview/user-overview.
     AppRoutingModule
   ],
   providers: [
-    UserOverviewService
+    UserOverviewService,
+    ScheduleImportService
   ],
   bootstrap: [AppComponent]
 })
