@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
+using System.Net.Http.Headers;
 using ImportScheduler.Core;
 using ImportScheduler.Infrastructure.Data;
 
@@ -44,10 +45,14 @@ namespace ImportScheduler.Controllers
 
                 if(file.Length > 0)
                 {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    var filePath = Path.Combine(uploadPath, fileName);
 
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
                 }
-
-
 
                 return Ok("Upload successful");
 
