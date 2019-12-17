@@ -33,7 +33,7 @@ namespace ImportScheduler.Controllers
             {
                 var file = Request.Form.Files[0];
 
-                if(file.ContentType != "text/csv") 
+                if (file.ContentType != "text/csv") 
                 {
                     return BadRequest("Upload failed: ContentType  not allowed!");
                 }
@@ -51,7 +51,7 @@ namespace ImportScheduler.Controllers
                 }
 
 
-                if(file.Length > 0)
+                if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var filePath = Path.Combine(uploadPath, fileName);
@@ -66,7 +66,7 @@ namespace ImportScheduler.Controllers
 
 
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 return BadRequest("Upload failed: " + ex.Message);
             }
