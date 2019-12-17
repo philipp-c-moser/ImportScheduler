@@ -7,8 +7,22 @@ import { Component } from '@angular/core';
 export class ScheduleImportFormComponent {
 
 
-  submit() {
+  submit(files) {
 
+    if(files.length === 0) 
+    {
+      return;
+    }
+
+    const formData = new FormData();
+
+    for(let file of files) 
+    {
+      formData.append(file.name, file);
+    }
+
+    
+    
   }
 
 }
