@@ -13,14 +13,14 @@ namespace ImportScheduler.Controllers
     {
         private readonly ImportSchedulerDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
 
-        public ImportController(ImportSchedulerDbContext context, IUnitOfWork unitOfWork, IHostingEnvironment hostingEnvironment)
+        public ImportController(ImportSchedulerDbContext context, IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
             _unitOfWork = unitOfWork;
-            _hostingEnvironment = hostingEnvironment;
+            _webHostEnvironment = webHostEnvironment;
         }
 
 
@@ -31,7 +31,7 @@ namespace ImportScheduler.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var webRootPath = _hostingEnvironment.WebRootPath;
+                var webRootPath = _webHostEnvironment.WebRootPath;
 
                 var uploadPath = Path.Combine(webRootPath, "Uploads");
 
