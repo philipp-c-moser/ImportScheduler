@@ -12,12 +12,14 @@ namespace ImportScheduler.Controllers
     {
         private readonly ImportSchedulerDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
 
-        public ImportController(ImportSchedulerDbContext context, IUnitOfWork unitOfWork)
+        public ImportController(ImportSchedulerDbContext context, IUnitOfWork unitOfWork, IHostingEnvironment hostingEnvironment)
         {
             _context = context;
             _unitOfWork = unitOfWork;
+            _hostingEnvironment = hostingEnvironment;
         }
 
 
@@ -28,6 +30,7 @@ namespace ImportScheduler.Controllers
             try
             {
                 var file = Request.Form.Files[0];
+                var webRootPath = _hostingEnvironment.WebRootPath;
 
 
                 return Ok("Upload successful");
