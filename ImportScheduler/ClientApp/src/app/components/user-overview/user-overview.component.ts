@@ -10,14 +10,14 @@ import { UserOverviewService } from 'src/app/services/user-overview.service';
 
 export class UserOverviewComponent {
 
-  rows: any[];
+  rows = [];
   columns = [
     { prop: 'id' },
-    { prop: 'firstname' },
-    { prop: 'lastname' },
+    { prop: 'firstName' },
+    { prop: 'lastName' },
     { prop: 'gender', minWidht: 50 },
     { prop: 'email', minWidth: 300 },
-    { prop: 'mobilenumber', sortable: false }
+    { prop: 'mobileNumber', sortable: false }
   ];
 
   loadingIndicator = true;
